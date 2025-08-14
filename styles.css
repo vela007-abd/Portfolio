@@ -53,7 +53,8 @@ body.dark-mode {
   display: flex;
   background: transparent;
   text-align: center;
-  margin-left: 45%;
+  /* margin-left: 45%; */
+  padding-left: 45%;
   justify-content: space-between;
 }
 

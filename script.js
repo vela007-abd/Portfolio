@@ -23,17 +23,20 @@ toggleBtn.addEventListener('click', () => {
   } catch {}
 });
 
-// Load saved theme or default to day
+// Load saved theme or default to night mode
 window.addEventListener('DOMContentLoaded', () => {
   try {
     const storedTheme = localStorage.getItem('preferred-theme');
     if (storedTheme === 'night') {
       setDayNightClass(true);
-    } else {
+    } else if (storedTheme === 'day') {
       setDayNightClass(false);
+    } else {
+      // Default to night mode if no preference is saved
+      setDayNightClass(true);
+      localStorage.setItem('preferred-theme', 'night');
     }
   } catch {
-    setDayNightClass(false);
+    setDayNightClass(true);
   }
 });
-

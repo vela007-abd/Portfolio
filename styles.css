@@ -50,7 +50,7 @@ body.dark-mode {
 }
 
 .nav-bar {
-  display: flex;
+  display: relative;
   background: transparent;
   text-align: center;
   /* margin-left: 45%; */
